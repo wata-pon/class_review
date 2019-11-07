@@ -9,16 +9,20 @@ tom.full_name()  # "Tom Ford" という値を返す
 
 
 class Customer:
-    def __init__(self, first_name, family_name):
+    def __init__(self, first_name, family_name, age):
         self.first_name = first_name
         self.family_name = family_name
+        self.age = age
 
     def full_name(self):
-        print(f'{self.first_name} {self.family_name}')
+        print(f'NAME:{self.first_name} {self.family_name}, AGE:{self.age}')
 
 
-ken = Customer("Ken", "Tanaka")
+ken = Customer("Ken", "Tanaka", 15)
 ken.full_name()
 
-tom = Customer("Tom", "Ford")
+tom = Customer("Tom", "Ford", 57)
 tom.full_name()
+
+ieyasu = Customer("Ieyasu", "Tokugawa", 73)
+ieyasu.full_name()

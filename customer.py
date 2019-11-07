@@ -13,27 +13,31 @@ class Customer:
         self.first_name = first_name
         self.family_name = family_name
         self.age = age
+        self.list = [self.full_name(), str(self.age), str(self.entry_fee())]
 
     def full_name(self):
-        print(f'NAME:{self.first_name} {self.family_name}, AGE:{self.age}')
+        return f'{self.first_name} {self.family_name}'
+
 
     def entry_fee(self):
         if self.age < 20:
-            print('1000円')
+            return 1000
         if 20 <= self.age < 65:
-            print('1500円')
+            return 1500
         if self.age >= 65:
-            print('1200円')
+            return 1200
+
+    def info_csv(self):
+        list_csv = ",".join(self.list)  # .join()は文字列を結合する
+        return list_csv
 
 
 ken = Customer("Ken", "Tanaka", 15)
-ken.full_name()
-ken.entry_fee()
+print(ken.full_name())
+print(ken.age)
+print(ken.entry_fee())
+print(ken.info_csv())
 
 tom = Customer("Tom", "Ford", 57)
-tom.full_name()
-tom.entry_fee()
 
 ieyasu = Customer("Ieyasu", "Tokugawa", 73)
-ieyasu.full_name()
-ieyasu.entry_fee()

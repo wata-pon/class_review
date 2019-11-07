@@ -17,12 +17,23 @@ class Customer:
     def full_name(self):
         print(f'NAME:{self.first_name} {self.family_name}, AGE:{self.age}')
 
+    def entry_fee(self):
+        if self.age < 20:
+            print('1000円')
+        if 20 <= self.age < 65:
+            print('1500円')
+        if self.age >= 65:
+            print('1200円')
+
 
 ken = Customer("Ken", "Tanaka", 15)
 ken.full_name()
+ken.entry_fee()
 
 tom = Customer("Tom", "Ford", 57)
 tom.full_name()
+tom.entry_fee()
 
 ieyasu = Customer("Ieyasu", "Tokugawa", 73)
 ieyasu.full_name()
+ieyasu.entry_fee()
